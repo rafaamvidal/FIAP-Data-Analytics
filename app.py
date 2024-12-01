@@ -1349,7 +1349,7 @@ elif menu == "Modelos":
 
   st.markdown('<h4>Selecione o modelo</h4>', unsafe_allow_html=True)
   # Abas para cada página
-  tab1, tab2, tab3 = st.tabs(["Prophet", "LSTM", "RNN Regressor"])
+  tab1, tab2, tab3, tab4 = st.tabs(["Prophet", "LSTM", "RNN Regressor","Conclusão"])
 
   # Conteúdo de cada página
   with tab1:
@@ -2204,6 +2204,7 @@ elif menu == "Modelos":
         st.error(f"Erro ao gerar gráficos: {e}")        
 
 
+
 #################################################################################################################################################
 
     # Código usado para leitura e exibição da tabela
@@ -2238,6 +2239,35 @@ elif menu == "Modelos":
 
     # Exibir a imagem no Stre
     st.image(imagem)
+
+    st.markdown('<h2 style="color:#e61859;">Conclusão da Análise: LSTM</h2>', unsafe_allow_html=True)
+
+    st.write("""O modelo LSTM apresentou um desempenho satisfatório na previsão dos preços do petróleo Brent, conforme evidenciado pelas seguintes métricas de avaliação:""")
+    st.write("""- **RMSE (Erro Quadrático Médio):** 1,88 – O valor relativamente baixo do RMSE indica que o modelo possui um erro médio 
+             pequeno em relação aos preços reais, o que demonstra uma boa capacidade preditiva, especialmente em relação a variações absolutas no preço.""")
+
+    st.write("""- **MAE (Erro Médio Absoluto):** 1,43 – O MAE reforça a precisão do modelo ao indicar que, em média, a diferença entre os valores previstos e os 
+              reais é de apenas 1,43 unidades monetárias (USD). Isso representa uma boa precisão para séries temporais financeiras.""")
+
+    st.write("""- **MAPE (Erro Percentual Médio Absoluto):** 2% – Com um MAPE de apenas 2%, o modelo apresenta um nível de erro percentual bastante baixo, 
+              o que significa que, em média, as previsões diferem apenas 2% dos valores reais. Isso é um indicativo de que o modelo consegue capturar bem a dinâmica dos preços com um alto grau de precisão.""")
+
+    st.write("""**Pontos positivos:**""")
+    st.write("""1. **Baixo erro absoluto e percentual**:""")
+    st.write("""- As métricas de RMSE, MAE e MAPE indicam que o modelo consegue prever o preço do petróleo Brent com precisão, especialmente em cenários de estabilidade e pequenas variações.""")
+
+    st.write("""2. **Consistência em diferentes períodos**:""")
+    st.write("""- A curva de previsão segue de forma estável as variações da série histórica, mostrando que o modelo consegue generalizar bem tanto para períodos de alta quanto de baixa volatilidade.""")
+
+    st.write("""**Limitações observadas**""")
+    st.write("""1. **Erro em momentos de alta volatilidade**:""")
+    st.write("""- Apesar das métricas gerais serem boas, o modelo ainda pode apresentar erros ligeiramente maiores em períodos de alta oscilação dos preços, conforme observado visualmente.""")
+
+    st.write("""2. **Dependência exclusiva da série histórica**:""")
+    st.write("""- O modelo utiliza apenas dados históricos do preço do petróleo, o que pode limitar sua precisão em eventos inesperados ou choques externos.""")      
+
+    st.write("""De forma geral, o modelo LSTM demonstrou ser uma ferramenta eficaz para a previsão dos preços do petróleo Brent, com métricas que indicam alta precisão.""")    
+
   
 
 #################################################################################################################################################
@@ -2349,6 +2379,90 @@ elif menu == "Modelos":
 
     # Exibir a imagem no Streamlit
     st.image(imagem)
+
+
+    st.markdown('<h2 style="color:#e61859;">Conclusão da Análise: RNN Regressor</h2>', unsafe_allow_html=True)
+
+    st.write("""O modelo RNN Regressor apresentou resultados consistentes na previsão dos preços do petróleo Brent, conforme indicado pelas métricas de desempenho:""")
+    st.write("""- **RMSE (Erro Quadrático Médio):** 2,05 – Embora seja ligeiramente superior ao do modelo LSTM, esse valor ainda indica uma boa precisão geral nas previsões, com erros moderados em relação aos valores reais.""")
+
+    st.write("""- **MAE (Erro Médio Absoluto):** 1,46 – O erro absoluto médio indica que a diferença média entre os valores reais e previstos foi de aproximadamente 1,46 unidades monetárias (USD), o que demonstra uma boa precisão no contexto de variações de preço do petróleo.""")
+
+    st.write("""- **MAPE (Erro Percentual Médio Absoluto):** 2% – Assim como o modelo LSTM, o RNN apresenta um erro percentual baixo, mostrando que as previsões diferem, em média, apenas 2% dos valores reais.""")
+
+    st.write("""**Pontos positivos:**""")
+    st.write("""1. **Acompanhamento fiel da série histórica**:""")
+    st.write("""- Conforme observado no gráfico, o modelo RNN consegue seguir com precisão a tendência dos valores reais, especialmente em períodos de estabilidade e variação moderada.""")
+
+    st.write("""2. **Baixa variação entre valores reais e previstos**:""")
+    st.write("""- As linhas de previsão estão bem próximas dos valores reais, o que indica que o modelo é eficiente para prever pequenas oscilações no preço.""")
+
+    st.write("""**Limitações observadas**""")
+    st.write("""1. **Sensibilidade a picos extremos**:""")
+    st.write("""- Embora o modelo consiga capturar bem as tendências gerais, ele pode apresentar dificuldades em prever com precisão picos de alta volatilidade, como mostrado em pontos de maior variação.""")
+
+    st.write("""2. **Erro ligeiramente superior ao LSTM**:""")
+    st.write("""- O RMSE do modelo RNN é um pouco maior, indicando que ele pode ser menos preciso em relação a certas variações rápidas dos preços.""")      
+
+    st.write("""O modelo **RNN Regressor** demonstrou ser eficaz para prever o preço do petróleo Brent, com desempenho competitivo em relação ao **LSTM** e uma precisão que o torna adequado para aplicações de previsão de preços em curto e médio prazo.""")    
+
+  with tab4:
+    st.markdown('<h2 style="color:#e61859;">Conclusão Comparativa: Prophet, LSTM e RNN Regressor para Previsão do Preço do Petróleo Brent</h2>', unsafe_allow_html=True)
+
+    st.write("""Com base na análise dos três modelos – **Prophet, LSTM e RNN Regressor** – e considerando suas métricas de desempenho, vantagens e limitações, podemos determinar o modelo mais adequado para prever o preço do petróleo Brent.""")
+
+    st.markdown('<h2 style="color:#e61859;">Modelo Prophet</h2>', unsafe_allow_html=True)    
+    st.write("""**Vantagens:**""")
+    st.write("""- Excelente para capturar tendências de longo prazo, especialmente em mercados com sazonalidade clara.""")
+    st.write("""- Fácil de interpretar, o que facilita a análise de componentes como tendência, sazonalidade e feriados.""")
+    st.write("""- A abordagem de validação cruzada demonstrou robustez para projeções estratégicas de longo prazo.""")
+
+    st.write("""**Limitações:**""")
+    st.write("""- Menor capacidade de capturar mudanças abruptas ou eventos externos não recorrentes, como crises geopolíticas.""")
+    st.write("""- Menor precisão para previsões de curto prazo em cenários de alta volatilidade.""")
+
+    st.write("""**Desempenho:**""")    
+    st.write("""- Indicado para projeções de longo prazo e análises estratégicas em ambientes estáveis.""")
+
+
+    st.markdown('<h2 style="color:#e61859;">Modelo LSTM (Long Short-Term Memory)</h2>', unsafe_allow_html=True)   
+    st.write("""**Vantagens:**""")
+    st.write("""- Forte capacidade de capturar padrões complexos e não lineares em séries temporais, sendo mais adequado para mercados voláteis.""")
+    st.write("""- Excelente desempenho em previsões de curto prazo devido à sua habilidade em lidar com dependências de longo prazo na sequência de dados.""")
+
+    st.write("""**Limitações:**""")
+    st.write("""- Requer maior poder computacional e tempo de treinamento em comparação com o Prophet.""")
+    st.write("""- Pode ser menos interpretável, o que dificulta a explicação de previsões para decisões estratégicas.""")
+
+    st.write("""**Desempenho:**""")    
+    st.write("""- Melhor desempenho geral nas previsões de curto prazo e cenários instáveis.""")
+
+
+    st.markdown('<h2 style="color:#e61859;">Modelo RNN Regressor</h2>', unsafe_allow_html=True)   
+    st.write("""**Vantagens:**""")
+    st.write("""- Também capaz de capturar padrões não lineares em séries temporais.""")
+    st.write("""- Mais simples e leve que o LSTM, com boa precisão para previsões em ambientes moderadamente voláteis.""")
+
+    st.write("""**Limitações:**""")
+    st.write("""- Menor capacidade de capturar dependências de longo prazo em comparação ao LSTM.""")
+    st.write("""- Menor precisão em ambientes altamente voláteis ou com eventos externos significativos.""")
+
+    st.write("""**Desempenho:**""")    
+    st.write("""- Adequado para previsões de curto prazo em cenários menos voláteis, mas inferior ao LSTM.""")
+
+
+    st.markdown('<h2 style="color:#e61859;">Conclusão Final</h2>', unsafe_allow_html=True)   
+
+    st.write("""Com base nos resultados e nas características dos modelos, o **LSTM** é o mais adequado para a previsão do preço do petróleo Brent. Isso se deve à sua:""")
+    st.write("""1. **Capacidade de capturar padrões não lineares complexos**, comuns no mercado de commodities.""")
+    st.write("""2. **Desempenho superior em métricas quantitativas (RMSE, MAPE e MAE)**, indicando maior precisão em comparação aos outros modelos.""")
+    st.write("""3. **Eficácia em cenários de curto prazo e alta volatilidade**, o que é essencial para um mercado tão sensível a fatores externos como o petróleo.""")
+
+    st.write("""Embora o **Prophet** seja uma excelente escolha para projeções de longo prazo e decisões estratégicas, sua precisão limitada em ambientes voláteis o torna menos eficaz para previsões 
+              operacionais no curto prazo. Já o **RNN Regressor**, apesar de apresentar bons resultados, fica atrás do **LSTM** em termos de precisão e capacidade de capturar padrões complexos.""")
+
+    st.write("""Portanto, para previsões mais precisas e operacionais do preço do petróleo Brent, o **LSTM é a melhor escolha.**""")
+
 
 #################################################################################################################################################
 
