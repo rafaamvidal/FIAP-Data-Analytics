@@ -3,20 +3,11 @@ import pandas as pd
 import numpy as np
 import requests
 from datetime import datetime, timedelta
-from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-from prophet import Prophet
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error, mean_absolute_error
 from sklearn.model_selection import train_test_split
-
-from tensorflow import keras
-from keras.models import Sequential
-from keras.layers import Dense, LSTM, SimpleRNN
-from statsmodels.tsa.arima.model import ARIMA
-from statsmodels.tsa.statespace.sarimax import SARIMAX
-from pmdarima import auto_arima
 import yfinance as yf
 from sklearn.preprocessing import MinMaxScaler
 
