@@ -7,3 +7,6 @@ prophet
 yfinance
 pmdarima
 sktime
+seaborn
+plotly
+matplotlib
