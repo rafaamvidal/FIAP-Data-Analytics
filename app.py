@@ -30,7 +30,7 @@ if menu == "O Desafio":
     st.write("**Rafael Morais Vidal RM 354846**")
     st.write("**Rafael Lopes Tanaka RM 356096**")
     st.write("**Rodrigo Kenji Rossetti Inonhe RM 354906**")
-    st.write("**Lucas Morikawa Giovanini RM XXXXXX**")
+    st.write("**Lucas Morikawa Giovanini RM 355007**")
 
     st.markdown('<h2 style="color:#e61859;">O Desafio</h2>', unsafe_allow_html=True)
     st.write(
@@ -120,7 +120,7 @@ elif menu == "Introdução":
   st.write("""Coletamos os dados de preço do petróleo Brent do site do IPEA, com as seguintes características:""")      
 
   st.write("""- **Variável**: Preço por barril do petróleo bruto Brent (FOB) (**EIA366_PBRENT366**).""")                
-  st.write("""- **Frequência**: Diária (de 04/01/1986 a 04/11/2024).""")
+  st.write("""- **Frequência**: Diária (de 04/01/1986 até a data mais atual que estiver disponível).""")
   st.write("""- **Unidade**: Dólares (US$).""")          
   st.write("""- **Fonte**: **Energy Information Administration (EIA)** """)    
   st.write("""- **Descrição**: O Brent, produzido no Mar do Norte (Europa), é um benchmark internacional para o preço do petróleo bruto. 
