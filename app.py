@@ -2356,7 +2356,13 @@ elif menu == "Dashboard":
 
   # Título da aplicação
   st.markdown('<h2 style="color:#e61859;">Dashboard</h2>', unsafe_allow_html=True)
-  st.components.html("https://app.powerbi.com/view?r=eyJrIjoiNDBjMDBlYjUtMzRmOC00YzkyLTg5NGUtYTg5MWNhN2JiMDI0IiwidCI6ImVmYTU1OWEyLTJmOTctNGRkNi1hMmFlLThhYjAyZDliMzMyOSJ9", scrolling = True)
+  
+  # URL do relatório do Power BI (substitua pelo link do seu relatório)
+  power_bi_url = "https://app.powerbi.com/view?r=eyJrIjoiNDBjMDBlYjUtMzRmOC00YzkyLTg5NGUtYTg5MWNhN2JiMDI0IiwidCI6ImVmYTU1OWEyLTJmOTctNGRkNi1hMmFlLThhYjAyZDliMzMyOSJ9"
+
+  # Incorporando o Power BI com iframe
+  st.components.v1.iframe(power_bi_url, width=800, height=600)
+
   st.write("Para acessar o dashboard em uma nova página, clique abaixo")
   st.markdown(
       """
