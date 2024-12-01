@@ -2356,4 +2356,12 @@ elif menu == "Dashboard":
 
   # Título da aplicação
   st.markdown('<h2 style="color:#e61859;">Dashboard</h2>', unsafe_allow_html=True)
+  st.components.html("https://app.powerbi.com/view?r=eyJrIjoiNDBjMDBlYjUtMzRmOC00YzkyLTg5NGUtYTg5MWNhN2JiMDI0IiwidCI6ImVmYTU1OWEyLTJmOTctNGRkNi1hMmFlLThhYjAyZDliMzMyOSJ9", scrolling = True)
+  st.write("""Para acessar o dashboard em uma nova página, clique abaixo")
+  st.markdown(
+      """
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiNDBjMDBlYjUtMzRmOC00YzkyLTg5NGUtYTg5MWNhN2JiMDI0IiwidCI6ImVmYTU1OWEyLTJmOTctNGRkNi1hMmFlLThhYjAyZDliMzMyOSJ9" target="_blank" style="text-decoration:none; color:#e61859; font-size:18px;">
+      DASHBOARD</a>
+      """,
+      unsafe_allow_html=True)    
 
