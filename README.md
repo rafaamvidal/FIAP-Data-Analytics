@@ -13,4 +13,4 @@ Você foi contratado(a) para uma consultoria, e seu trabalho envolve analisar os
 O MVP encontra-se publicado no servidor Streamlit e você pode acessa-lo pelo link abaixo:
 <h3><a href="https://mvp-tech-fase4.streamlit.app/">🔗 MVP </a></h3>
 
-Caso queira ver as análises que foram feitas durante o trabalho, acessos os arquivos dentro da pasta **Notebooks**
+Caso queira ver as análises que foram feitas durante o trabalho, acesse os arquivos dentro da pasta **Notebooks**
