@@ -164,8 +164,6 @@ elif menu == "Dados":
       """,
       unsafe_allow_html=True)  
 
-  st.write("""Usamos o html da tabela no site em questao e criamos um arquivo html chamado tabela-brent.""")  
-
 #################################################################################################################################################
 
   import pandas as pd
