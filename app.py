@@ -11,7 +11,7 @@ import yfinance as yf
 from sklearn.preprocessing import MinMaxScaler
 
 # Configurando o menu lateral
-menu = st.sidebar.radio("Menu", ["O Desafio", "Introdução", "Dados", "Modelos","Dashboard"])
+menu = st.sidebar.radio("Menu", ["O Desafio", "Introdução", "Dados", "Modelos","Dashboard","Conclusão"])
 
 # Exibe conteúdo com base na opção selecionada
 if menu == "O Desafio":
@@ -2485,3 +2485,49 @@ elif menu == "Dashboard":
       """,
       unsafe_allow_html=True)    
 
+elif menu == "Conclusão":
+
+  # Título da aplicação
+  st.markdown('<h2 style="color:#e61859;">Conclusão do Projeto de Análise e Previsão do Preço do Petróleo Brent</h2>', unsafe_allow_html=True)
+
+  st.write("""O projeto de análise e previsão do preço do petróleo Brent revelou a complexidade inerente a um mercado globalmente 
+            estratégico e altamente volátil. Desde as oscilações históricas impulsionadas por eventos geopolíticos até flutuações sazonais e transições econômicas, 
+            nosso estudo trouxe à tona insights valiosos sobre padrões passados, fatores determinantes e possibilidades futuras, respondendo às principais perguntas que nortearam o trabalho.""")
+
+  st.markdown('<h3 style="color:#e61859;">Respostas às Perguntas do Estudo</h3>', unsafe_allow_html=True)
+
+  st.write("""1. **Quais são os padrões históricos do mercado?**""")
+  st.write("""- Identificamos tendências sazonais claras, como os preços mais baixos em dezembro e janeiro, associados à baixa demanda e estoques elevados, e aumentos significativos em junho e julho devido à alta demanda no verão do hemisfério norte.""")
+  st.write("""- Eventos como a Guerra do Golfo (1990), o pico histórico de 2008 e a queda de 2020, causada pela pandemia de COVID-19, são exemplos das flutuações abruptas que caracterizam esse mercado volátil.""")
+
+  st.write("""2. **O que impulsiona as flutuações de preço?**""")
+  st.write("""- **Fatores geopolíticos**: Conflitos no Oriente Médio e decisões da OPEP.""")
+  st.write("""- **Fatores econômicos**: Crises financeiras e transições para fontes renováveis desafiam padrões tradicionais.""")
+  st.write("""- **Fatores sazonais**: Estações do ano alteram a demanda, enquanto estoques e produção influenciam preços.""")
+  st.write("""- **Eventos climáticos**: Furacões e interrupções inesperadas na produção adicionam um elemento imprevisível.""")
+
+  st.write("""3. **Como é possível prever as tendências futuras?**""")
+  st.write("""- Utilizando modelos robustos, como o LSTM, que lidam com padrões complexos e não lineares em cenários voláteis de curto prazo.""")
+  st.write("""- O Prophet mostrou-se eficaz para análises de longo prazo em cenários estáveis, reforçando a importância de usar modelos complementares.""")
+
+  st.markdown('<h3 style="color:#e61859;">Modelo Selecionado</h3>', unsafe_allow_html=True)
+  st.write("""Após comparar Prophet, LSTM e RNN Regressor, o LSTM destacou-se como o mais adequado para previsões operacionais de curto prazo devido à sua 
+            capacidade de capturar padrões não lineares e seu desempenho superior em métricas como MAPE, RMSE e MAE. Enquanto o Prophet continua valioso para análises 
+            estratégicas de longo prazo, o LSTM atende às exigências de precisão e agilidade de um mercado sensível a mudanças rápidas.""")
+
+  st.markdown('<h3 style="color:#e61859;">Desafios e Relevância</h3>', unsafe_allow_html=True)
+  st.write("""O estudo ressaltou desafios como a imprevisibilidade de eventos geopolíticos, a transição para energias renováveis e a influência de fatores climáticos. 
+            Esses elementos reforçam a necessidade de modelos preditivos que considerem variáveis exógenas para maior precisão.""")
+  st.write("""A análise revelou a resiliência do mercado, evidenciada por padrões de recuperação após choques e pela influência das decisões estratégicas da OPEP. 
+            Esses insights são essenciais para investidores, indústrias e formuladores de políticas públicas, ajudando na gestão de riscos e na tomada de decisões estratégicas.""")
+
+  st.markdown('<h3 style="color:#e61859;">Conclusão Final: O Futuro à Luz do Passado</h3>', unsafe_allow_html=True)
+  st.write("""Assim como o Brent reflete o pulso da economia global, este projeto ilustra o poder transformador da análise de dados.
+            Compreender os padrões históricos e antecipar tendências não é apenas um diferencial competitivo, mas uma necessidade estratégica. 
+            Ao integrar ciência de dados, conhecimento do mercado e modelos avançados, criamos não apenas previsões, mas um mapa para navegar as complexidades de um mundo em constante transformação.""")
+  st.write("""Este estudo demonstrou que a previsão de preços do petróleo Brent exige uma abordagem que equilibre análises quantitativas robustas e considerações qualitativas sobre fatores externos. 
+            O LSTM, com sua capacidade de lidar com padrões complexos, provou ser a melhor escolha para previsões operacionais de curto prazo. No entanto, 
+            o Prophet, com validação cruzada, permanece uma ferramenta valiosa para análises estratégicas de longo prazo.""")
+  st.write("""Compreender padrões históricos e antecipar tendências futuras não é apenas uma vantagem competitiva, mas uma necessidade em um mercado global tão estratégico. 
+            Este estudo reforça a importância de unir ciência de dados, tecnologia e expertise de mercado para enfrentar os desafios e aproveitar as oportunidades de um mundo em constante transformação. 
+            O Brent continuará sendo o termômetro da economia mundial, e, agora, estamos mais preparados para interpretar o que ele nos revela.""")
